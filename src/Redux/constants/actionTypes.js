@@ -1,0 +1,4 @@
+export const actionTypes = {
+  FETCH_LOCATION_DATA: "FETCH_LOCATION_DATA",
+  SET_LOCATION_DATA: "SET_LOCATION_DATA",
+};

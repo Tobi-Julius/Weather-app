@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const TopComponent = () => {
+const Error = () => {
   return (
     <View>
-      <Text>TopComponent</Text>
+      <Text>Error</Text>
     </View>
   )
 }
 
-export default TopComponent
+export default Error
 
 const styles = StyleSheet.create({})
