@@ -3,7 +3,7 @@ import { registerRootComponent } from "expo";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TopNavigation from "./TopNavigation/TopNavigation";
-import TopComponent from "./component/page/TopComponent";
+import { TopComponent } from "./component/page";
 import { Theme } from "./constants/Theme";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
