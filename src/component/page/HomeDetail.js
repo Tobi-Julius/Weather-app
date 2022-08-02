@@ -33,7 +33,7 @@ export const HomeDetail = ({ data }) => {
         <Text
           textStyle={{
             fontWeight: "bold",
-            fontSize: 25,
+            fontSize: 28,
             fontFamily: "serif",
             color: "#3a1212",
           }}
@@ -46,7 +46,7 @@ export const HomeDetail = ({ data }) => {
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop: "10%",
+          marginTop: "7%",
         }}
       >
         <View>
@@ -79,7 +79,7 @@ export const HomeDetail = ({ data }) => {
 
       {/* MainPage  */}
 
-      <View style={{ marginTop: "10%" }}>
+      <View style={{ marginTop: "7%" }}>
         <Image
           source={{
             uri: `https://${icon}`,
@@ -87,30 +87,30 @@ export const HomeDetail = ({ data }) => {
           style={{ width: 80, height: 80 }}
         />
         <View style={{ marginLeft: 20 }}>
-          <Text text={`${temp_c} °C`} />
-          <Text text={`${temp_f} F`} />
+          <Text text={`${temp_c}°C`} />
+          <Text text={`${temp_f}F`} />
         </View>
-        <Text text={text} />
+        <Text style={{ marginLeft: 20 }} text={text} />
       </View>
 
       {/* others */}
 
       <View
         style={{
-          // marginTop: "10%",
+          marginTop: "5%",
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "center",
-          marginBottom: "6%",
+          marginBottom: "10%",
         }}
       >
         <View
           style={{
             marginLeft: 4,
             backgroundColor: "#fff",
-            width: "33%",
-            height: "30%",
+            width: "30%",
+            height: "50%",
             borderRadius: 10,
             shadowColor: "purple",
             shadowOpacity: 1,
@@ -122,8 +122,7 @@ export const HomeDetail = ({ data }) => {
         >
           <Text
             textStyle={{
-              // marginBottom: "3%",
-              fontSize: 24,
+              fontSize: 19,
               alignSelf: "center",
               letterSpacing: 1.5,
             }}
@@ -131,9 +130,9 @@ export const HomeDetail = ({ data }) => {
           />
           <Text
             textStyle={{
-              // marginBottom: "3%",
               fontSize: 24,
               alignSelf: "center",
+              fontWeight: "bold",
             }}
             text={`${wind_mph}mph`}
           />
@@ -142,8 +141,8 @@ export const HomeDetail = ({ data }) => {
           style={{
             marginLeft: 4,
             backgroundColor: "#fff",
-            width: "33%",
-            height: "30%",
+            width: "30%",
+            height: "50%",
             borderRadius: 10,
             shadowColor: "purple",
             shadowOpacity: 1,
@@ -155,8 +154,7 @@ export const HomeDetail = ({ data }) => {
         >
           <Text
             textStyle={{
-              // margintottom: "3%",
-              fontSize: 24,
+              fontSize: 19,
               alignSelf: "center",
               letterSpacing: 1.5,
             }}
@@ -164,9 +162,9 @@ export const HomeDetail = ({ data }) => {
           />
           <Text
             textStyle={{
-              // marginBottom: "3%",
               fontSize: 24,
               alignSelf: "center",
+              fontWeight: "bold",
             }}
             text={wind_dir}
           />
@@ -175,8 +173,8 @@ export const HomeDetail = ({ data }) => {
           style={{
             marginLeft: 4,
             backgroundColor: "#fff",
-            width: "33%",
-            height: "30%",
+            width: "30%",
+            height: "50%",
             borderRadius: 10,
             shadowColor: "purple",
             shadowOpacity: 1,
@@ -188,8 +186,7 @@ export const HomeDetail = ({ data }) => {
         >
           <Text
             textStyle={{
-              // margintottom: "3%",
-              fontSize: 24,
+              fontSize: 19,
               alignSelf: "center",
               letterSpacing: 1.5,
             }}
@@ -197,19 +194,19 @@ export const HomeDetail = ({ data }) => {
           />
           <Text
             textStyle={{
-              // marginBottom: "3%",
               fontSize: 24,
               alignSelf: "center",
+              fontWeight: "bold",
             }}
-            text={`${feelslike_c} °C`}
+            text={`${feelslike_c}°C`}
           />
         </View>
         <View
           style={{
             marginLeft: 4,
             backgroundColor: "#fff",
-            width: "33%",
-            height: "30%",
+            width: "30%",
+            height: "50%",
             borderRadius: 10,
             shadowColor: "purple",
             shadowOpacity: 1,
@@ -221,8 +218,7 @@ export const HomeDetail = ({ data }) => {
         >
           <Text
             textStyle={{
-              // margintottom: "3%",
-              fontSize: 24,
+              fontSize: 19,
               alignSelf: "center",
               letterSpacing: 1.5,
             }}
@@ -230,9 +226,9 @@ export const HomeDetail = ({ data }) => {
           />
           <Text
             textStyle={{
-              // marginBottom: "3%",
               fontSize: 24,
               alignSelf: "center",
+              fontWeight: "bold",
             }}
             text={`${feelslike_f}F`}
           />
@@ -242,8 +238,8 @@ export const HomeDetail = ({ data }) => {
           style={{
             marginLeft: 4,
             backgroundColor: "#fff",
-            width: "33%",
-            height: "30%",
+            width: "30%",
+            height: "50%",
             borderRadius: 10,
             shadowColor: "purple",
             shadowOpacity: 1,
@@ -255,7 +251,7 @@ export const HomeDetail = ({ data }) => {
         >
           <Text
             textStyle={{
-              fontSize: 24,
+              fontSize: 19,
               alignSelf: "center",
               letterSpacing: 1.5,
             }}
@@ -265,6 +261,7 @@ export const HomeDetail = ({ data }) => {
             textStyle={{
               fontSize: 24,
               alignSelf: "center",
+              fontWeight: "bold",
             }}
             text={cloud}
           />
@@ -273,8 +270,8 @@ export const HomeDetail = ({ data }) => {
           style={{
             marginLeft: 4,
             backgroundColor: "#fff",
-            width: "33%",
-            height: "30%",
+            width: "30%",
+            height: "50%",
             borderRadius: 10,
             shadowColor: "purple",
             shadowOpacity: 1,
@@ -286,8 +283,7 @@ export const HomeDetail = ({ data }) => {
         >
           <Text
             textStyle={{
-              // margintottom: "3%",
-              fontSize: 24,
+              fontSize: 19,
               alignSelf: "center",
               letterSpacing: 1.5,
             }}
@@ -295,8 +291,8 @@ export const HomeDetail = ({ data }) => {
           />
           <Text
             textStyle={{
-              // marginBottom: "3%",
               fontSize: 24,
+              fontWeight: "bold",
               alignSelf: "center",
             }}
             text={humidity}

@@ -1,12 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { ActivityIndicator, StyleSheet, View } from "react-native";
+import React from "react";
+import { useSelector } from "react-redux";
+import { Error, ForecastDetail } from "../component/page";
+import { Theme } from "../constants/Theme";
 
 export const Forecast = () => {
-  return (
-    <View>
-      <Text>Forecast</Text>
-    </View>
-  )
-}
+  const dataFetched = useSelector((state) => state.allData);
 
-const styles = StyleSheet.create({})
+  return dataFetched.coords ? (
+    <View>
+      {dataFetched.forecastData ? (
+        <ForecastDetail data={dataFetched} />
+      ) : (
+        <ActivityIndicator size={24} color={Theme.backgroundColor} />
+      )}
+    </View>
+  ) : (
+    <Error />
+  );
+};
+
+const styles = StyleSheet.create({});

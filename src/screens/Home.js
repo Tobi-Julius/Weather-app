@@ -1,7 +1,11 @@
-import { StyleSheet, View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import * as Location from "expo-location";
-import { fetchLocation } from "../Redux/action/locationAction";
+import {
+  fetchLocation,
+  setCoords,
+  fetchForecast,
+} from "../Redux/action/locationAction";
 import { useSelector, useDispatch } from "react-redux";
 import { Theme } from "../constants/Theme";
 import { Error, HomeDetail } from "../component/page";
@@ -23,9 +27,15 @@ export const Home = () => {
         setLocationGranted(false);
       }
       const locationEncode = await Location.getCurrentPositionAsync({});
+      dispatch(
+        setCoords(
+          `${locationEncode.coords.latitude}%2C${locationEncode.coords.longitude}`
+        )
+      );
       setLocation(
         `${locationEncode.coords.latitude}%2C${locationEncode.coords.longitude}`
       );
+      dispatch(fetchForecast(location));
     };
     _startLocation();
     dispatch(fetchLocation(location));
@@ -34,14 +44,16 @@ export const Home = () => {
   return locationGranted ? (
     <View>
       {data.locationData === "" || !data.locationData.location ? (
-        <ActivityIndicator size="large" color={Theme.backgroundColor} />
+        <ActivityIndicator
+          size="large"
+          style={{ marginTop: 10 }}
+          color={Theme.backgroundColor}
+        />
       ) : (
         <HomeDetail data={data} />
       )}
     </View>
   ) : (
-      <Error />
+    <Error />
   );
 };
-
-const styles = StyleSheet.create({});

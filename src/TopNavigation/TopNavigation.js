@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { Home, Forecast, Sport } from "../screens";
+import { Home, Sport, Forecast } from "../screens";
 import Account from "../screens/Account";
 import { Theme } from "../constants/Theme";
 import {

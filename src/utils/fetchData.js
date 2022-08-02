@@ -1,4 +1,4 @@
-import axios from "axios";
+import ForecastApi from "./ForecastApi";
 
 export const weatherOptions = {
   method: "GET",
@@ -9,7 +9,7 @@ export const weatherOptions = {
 };
 
 export const fetchData = async (url, option) => {
-  const response = await axios.get(url, option);
+  const response = await ForecastApi.get(url, option);
   const data = response.data;
 
   return data;
