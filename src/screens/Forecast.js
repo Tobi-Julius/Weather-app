@@ -9,10 +9,10 @@ export const Forecast = () => {
 
   return dataFetched.coords ? (
     <View>
-      {dataFetched.forecastData ? (
-        <ForecastDetail data={dataFetched} />
-      ) : (
+      {dataFetched.forecastData === [] ? (
         <ActivityIndicator size={24} color={Theme.backgroundColor} />
+      ) : (
+        <ForecastDetail data={dataFetched} />
       )}
     </View>
   ) : (

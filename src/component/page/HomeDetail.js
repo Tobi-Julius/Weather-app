@@ -18,6 +18,8 @@ export const HomeDetail = ({ data }) => {
     feelslike_f,
   } = data.locationData.current;
   const { text, icon } = data.locationData.current.condition;
+
+  
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}

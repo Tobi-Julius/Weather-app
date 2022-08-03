@@ -12,7 +12,7 @@ export const fetchLocation = (location) => async (dispatch) => {
 };
 
 export const fetchForecast = (location) => async (dispatch) => {
-  await fetchData(`/forecast.json?q=${location}&days=3`, weatherOptions)
+  await fetchData(`/forecast.json?q=${location}&days=2`, weatherOptions)
     .then((res) => {
       dispatch({ type: actionTypes.FETCH_FORECAST_DATA, payload: res });
     })

@@ -27,16 +27,20 @@ export const Home = () => {
         setLocationGranted(false);
       }
       const locationEncode = await Location.getCurrentPositionAsync({});
+
       dispatch(
         setCoords(
           `${locationEncode.coords.latitude}%2C${locationEncode.coords.longitude}`
         )
       );
+
       setLocation(
         `${locationEncode.coords.latitude}%2C${locationEncode.coords.longitude}`
       );
+
       dispatch(fetchForecast(location));
     };
+
     _startLocation();
     dispatch(fetchLocation(location));
   }, [location]);
