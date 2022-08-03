@@ -15,7 +15,7 @@ export const Sport = () => {
       style={{ width: "100%", height: "100%" }}
     >
       {sportData?.football?.map((each, index) => (
-        <MatchCard data={each} index={index} />
+        <MatchCard key={index} data={each} index={index} />
       ))}
     </ScrollView>
   );

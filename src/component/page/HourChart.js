@@ -1,6 +1,6 @@
 import { Dimensions, StyleSheet, View, ScrollView } from "react-native";
-import React, { useState } from "react";
-import { BarChart, LineChart } from "react-native-chart-kit";
+import React from "react";
+import { LineChart } from "react-native-chart-kit";
 import { Theme } from "../../constants/Theme";
 import { Text } from "../common";
 
@@ -22,7 +22,7 @@ export const HourChart = ({ data }) => {
           yAxisLabel="°c "
           data={dataChart}
           width={Dimensions.get("window").width}
-          height={300}
+          height={400}
           chartConfig={{
             backgroundColor: Theme.backgroundColor,
             backgroundGradientFrom: Theme.lightColor,
