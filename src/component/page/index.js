@@ -5,3 +5,4 @@ export * from "./ForecastDetail";
 export * from "./HourChart";
 export * from "./ForecastHead";
 export * from "./ForecastBody";
+export * from "./MatchCard";

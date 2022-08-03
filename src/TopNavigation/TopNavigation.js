@@ -1,4 +1,3 @@
-import { StyleSheet } from "react-native";
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Home, Sport, Forecast } from "../screens";
@@ -81,7 +80,7 @@ const TopNavigation = () => {
         }}
         component={Sport}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Account"
         options={{
           tabBarIcon: () => (
@@ -94,11 +93,9 @@ const TopNavigation = () => {
           ),
         }}
         component={Account}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
 
 export default TopNavigation;
-
-const styles = StyleSheet.create({});

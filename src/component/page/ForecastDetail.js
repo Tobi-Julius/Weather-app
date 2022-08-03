@@ -1,6 +1,5 @@
-import { StyleSheet, View, ScrollView, ActivityIndicator } from "react-native";
+import { StyleSheet, ScrollView, ActivityIndicator } from "react-native";
 import React from "react";
-import { Text } from "../common";
 import { HourChart } from "./HourChart";
 import { ForecastBody } from "./ForecastBody";
 import { ForecastHead } from "./ForecastHead";
@@ -13,8 +12,9 @@ export const ForecastDetail = ({ data }) => {
 
   return data.forecastData.location ? (
     <ScrollView
+      showsVerticalScrollIndicator={false}
       style={{
-        backgroundColor: Theme.backgroundColor,
+        backgroundColor: Theme.lightColor,
         height: "100%",
       }}
     >

@@ -5,6 +5,7 @@ import {
   fetchLocation,
   setCoords,
   fetchForecast,
+  fetchSport,
 } from "../Redux/action/locationAction";
 import { useSelector, useDispatch } from "react-redux";
 import { Theme } from "../constants/Theme";
@@ -28,21 +29,17 @@ export const Home = () => {
       }
       const locationEncode = await Location.getCurrentPositionAsync({});
 
-      dispatch(
-        setCoords(
-          `${locationEncode.coords.latitude}%2C${locationEncode.coords.longitude}`
-        )
-      );
-
       setLocation(
         `${locationEncode.coords.latitude}%2C${locationEncode.coords.longitude}`
       );
 
+      dispatch(setCoords(location));
       dispatch(fetchForecast(location));
+      dispatch(fetchLocation(location));
+      dispatch(fetchSport());
     };
 
     _startLocation();
-    dispatch(fetchLocation(location));
   }, [location]);
 
   return locationGranted ? (

@@ -20,6 +20,16 @@ export const fetchForecast = (location) => async (dispatch) => {
       dispatch({ type: actionTypes.FETCH_FORECAST_DATA, payload: err });
     });
 };
+
+export const fetchSport = () => async (dispatch) => {
+  await fetchData(`/sports.json?q=London`, weatherOptions)
+    .then((res) => {
+      dispatch({ type: actionTypes.FETCH_SPORT_DATA, payload: res });
+    })
+    .catch((err) => {
+      dispatch({ type: actionTypes.FETCH_SPORT_DATA, payload: err });
+    });
+};
 export const setCoords = (latlon) => {
   return {
     type: actionTypes.COORDS,

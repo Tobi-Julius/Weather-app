@@ -3,7 +3,8 @@ import { actionTypes } from "../constants/actionTypes";
 const initialState = {
   locationData: {},
   forecastData: [],
-  coords:""
+  sportData: {},
+  coords: "",
 };
 
 export const locationReducer = (state = initialState, { type, payload }) => {
@@ -16,6 +17,9 @@ export const locationReducer = (state = initialState, { type, payload }) => {
 
     case actionTypes.COORDS:
       return { ...state, coords: payload };
+
+    case actionTypes.FETCH_SPORT_DATA:
+      return { ...state, sportData: payload };
 
     default:
       return state;

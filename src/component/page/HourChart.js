@@ -21,7 +21,7 @@ export const HourChart = ({ data }) => {
         <LineChart
           yAxisLabel="°c "
           data={dataChart}
-          width={Dimensions.get("screen").width}
+          width={Dimensions.get("window").width}
           height={300}
           chartConfig={{
             backgroundColor: Theme.backgroundColor,
